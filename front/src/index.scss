@@ -50,7 +50,7 @@ body{
         }
     }
     
-    main.container{
+    .container{
         padding: 0;
         margin: 0;
         width: 100%;
@@ -157,36 +157,39 @@ body{
             }
         }
     }
-    .product-view.media{
+    .product-view{
         background: $white;
         border-radius: 4px;
-        .media-left{
-            img.picture{
-                margin: 32px;
-            }
+        span.new{
+            margin: 32px 0 16px 0;
+            display: block;    
+            font-size: 14px;    
         }
-        .media-body{
-            width: 30%;
-            span.new{
-                padding: 32px 0 16px 0;
-                display: block;
-            }
-            h1.product-title{
-                font-size: 24px;
-                width: 70%;
-                margin: 0 0 32px 0;
-            }
-            h4{
+        h1.product-title{
+            font-size: 24px;
+            line-height: 30px;
+            width: 80%;
+        }
+        span{
+            &.price{
                 font-size: 48px;
-                font-weight: 400;
+                display: inline-block;
+                margin: 32px 0;
             }
-            button{
-                width: 75%;
-                background: #3483FA;
-                border: none;
-                margin: 32px 32px 32px 0;
-                height: 40px;
+            &.decimals{
+                font-size: 20px;
+                display: inline-block;
+                position: absolute;
+                margin-top: 42px;
             }
+        } 
+    
+        button{
+            width: 75%;
+            background: #3483FA;
+            border: none;
+            margin: 0 32px 0 0;
+            height: 40px;
         }
         .description{
             h2{

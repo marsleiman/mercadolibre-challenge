@@ -70,8 +70,8 @@ router.route('/items/:item_id').get(function(req, res){
                             title : data.title,
                             price : {
                                 currency : data.currency_id,
-                                amount :  data.price,
-                                decimals : (data.price % 1) ? 2 : 0
+                                amount :  Math.trunc(data.price),
+                                decimals : Math.trunc(data.price % 1 * 100)
                             },
                             picture : data.pictures[0].url,
                             condition : data.condition,

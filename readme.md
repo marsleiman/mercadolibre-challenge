@@ -7,6 +7,7 @@ https://dropbox.com/sh/nbq7zvtqd2gb9ab/AABIy7kFj4BvLeNfbLib_Jcya?dl=0
 ## Requisitos
 
  - Node 8
+ - Sass
 
 ## Instalacion
 

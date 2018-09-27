@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
@@ -39,25 +39,25 @@ export class SearchBox extends Component {
 
   render() {
     return (
-        <Row>
-          <Col xs={2} md={1} xsOffset={1}>
-            <img src={logo} alt='MercadoLibre' className='logo' onClick={event => this.goHome(event)} />
-          </Col>
-          <Col xs={8} md={10}>
-            <form action='/items/' method='get'>
-              <input
-                type='text'
-                name='search'
-                value={this.state.query}
-                onChange={this.handleQuerySearch}
-                placeholder='Nunca dejes de buscar'
-              />
-              <button type='submit' onClick={evt => this.search(evt)}>
-                <img src={icSearch} alt='Search' className='icon-search'/>
-              </button>
-            </form>
-          </Col>
-        </Row>
+      <Row>
+        <Col xs={12} md={1} xsOffset={1}>
+          <img src={logo} alt='MercadoLibre' className='logo' onClick={event => this.goHome(event)} />
+        </Col>
+        <Col xs={12} md={10}>
+          <form action='/items/' method='get'>
+            <input
+              type='text'
+              name='search'
+              value={this.state.query}
+              onChange={this.handleQuerySearch}
+              placeholder='Nunca dejes de buscar'
+            />
+            <button type='submit' onClick={evt => this.search(evt)}>
+              <img src={icSearch} alt='Search' className='icon-search'/>
+            </button>
+          </form>
+        </Col>
+      </Row>
     )
   }
 

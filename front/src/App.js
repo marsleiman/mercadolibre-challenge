@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Switch, Route } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Grid, Col } from 'react-bootstrap';
 
 import BreadCrumb from './components/BreadCrumb';
 import Product from './components/Product';
@@ -16,19 +16,21 @@ class App extends Component {
         <header>
           <SearchBox/>
         </header>
-        <main className='container'>
-          <Col xs={10} xsOffset={1} >
+        <Grid>
             <Row>
-              <BreadCrumb/>
+              <Col xs={10} xsOffset={1} >
+                <BreadCrumb/>
+              </Col>
             </Row>
             <Row>
+              <Col xs={10} xsOffset={1} >
                 <Switch>
                   <Route path='/items/:id' component={Product} />
                   <Route path='/items' render={(props) => <ProductList {...props}/>} />
                 </Switch>
+              </Col>
             </Row>
-          </Col>
-        </main>
+        </Grid>
       </div>
     );
   }

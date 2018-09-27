@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import {Media, Button} from 'react-bootstrap';
+import { Row, Col, Button} from 'react-bootstrap';
 import CurrencyFormat from 'react-currency-format';
 
 export default class Product extends Component {
@@ -22,26 +22,27 @@ export default class Product extends Component {
   render() {
     if(this.state.product.item){
       return (
-          <Media className='product-view'>
-            <Media.Left>
-              <img width={680} height={680} src={this.state.product.item.picture} alt='thumbnail' className='picture'/>
-            </Media.Left>
-            <Media.Body>
-              <span className='new'>Nuevo - 234 vendidos</span>
+      <Col className='product-view'> 
+					<Row>
+            <Col xs={12} md={8}>
+              <img width="100%" styles='max-width: 680px' height="auto" src={this.state.product.item.picture} alt='thumbnail' className='picture'/>
+            </Col>
+            <Col xs={12} md={4}>
+              <span className='new'>{this.state.product.item.condition == 'new' ? 'Nuevo' : 'Usado'} - {this.state.product.item.sold_quantity > 1 ? `${this.state.product.item.sold_quantity} vendidos` : `${this.state.product.item.sold_quantity} vendido`}</span>
               <h1 className='product-title'>{this.state.product.item.title}</h1>
-              <Media.Heading>
-                <CurrencyFormat value={this.state.product.item.price.amount} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} prefix={'$ '}></CurrencyFormat>
-                <span className='decimals'>{this.state.product.item.price.decimals || ""}</span>
-              </Media.Heading>
-
-
+              <CurrencyFormat value={this.state.product.item.price.amount} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} prefix={'$ '} className='price'>
+              </CurrencyFormat>
+              <span className='decimals'>{this.state.product.item.price.decimals || ""}</span>
               <Button bsStyle='primary'>Comprar</Button>
-            </Media.Body>
-            <div className='description'>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={8}>
               <h2>Descripción del producto</h2>
               <p>{this.state.product.item.description}</p>
-            </div>
-          </Media>
+            </Col>
+          </Row>
+        </Col>
       )
     }
     return (
