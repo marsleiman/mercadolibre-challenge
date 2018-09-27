@@ -107,19 +107,15 @@ body{
                             margin: 32px 0 0 0;
                             font-weight: 500;
                         }
-                        span.unico{
-                            font-size: 18px;
-                            font-weight: 500;
-                        }
                         span{
                             font-size: 24px;
                         &.decimals{
-                            position: absolute;
+                            display: inline-block;
                             font-size: 14px;
-                            margin-top: 5px;
+                            vertical-align: super;
                             }
                         }
-                        span.free{
+                        p.free{
                             &:after{
                                 content: "";
                                 background-image: url('./static/ic_shipping.png');
@@ -128,10 +124,11 @@ body{
                                 position: relative;
                                 display: inline-block;
                                 background-repeat: no-repeat;
-                                vertical-align: sub;
                                 background-position: center;
                                 background-size: contain;
-                                margin-left: 5px;
+                                margin-left: 10px;
+                                top: 2px;
+                            }
                             }
                         }
                         span.region{

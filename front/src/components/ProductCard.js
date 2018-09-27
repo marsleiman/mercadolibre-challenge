@@ -13,11 +13,11 @@ export default function ProductCard ({product}) {
                                 <img width={180} height={180} src={product.picture} alt='thumbnail' />
                         </Media.Left>
                         <Media.Body>
-                            <div>
-                                <CurrencyFormat value={product.price.amount} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} prefix={'$ '} className={product.free_shipping ? 'free' : ''}></CurrencyFormat>
-                                <span className='decimals'>{product.price.decimals || ""}</span>
-                                <span className='region'>{product.region}</span>
-                            </div>
+                           <p className={product.free_shipping ? 'free' : ''}>
+                            <CurrencyFormat value={product.price.amount} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} prefix={'$ '}></CurrencyFormat>
+                            <span className='decimals'>{product.price.decimals || ""}</span>
+                           </p>
+                            <span className='region'>{product.region}</span>
                             <h2 className='title-product'>{product.title}</h2>
                         </Media.Body>
                     </Link>
