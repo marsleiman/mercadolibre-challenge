@@ -10,14 +10,14 @@ export default function ProductCard ({product}) {
                 <Media.ListItem>
                     <Link to={`/items/${product.id}`}>
                         <Media.Left>
-                                <img width={180} height={180} src={product.picture} alt='thumbnail' />
+                            <img width={180} height={180} src={product.picture} alt='thumbnail' />
                         </Media.Left>
                         <Media.Body>
-                           <p className={product.free_shipping ? 'free' : ''}>
-                            <CurrencyFormat value={product.price.amount} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} prefix={'$ '}></CurrencyFormat>
-                            <span className='decimals'>{product.price.decimals || ""}</span>
-                           </p>
-                            <span className='region'>{product.region}</span>
+                            <p className={product.free_shipping ? 'free' : ''}>
+                                <CurrencyFormat value={product.price.amount} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} prefix={'$ '}></CurrencyFormat>
+                                <span className='decimals'>{product.price.decimals || ""}</span>
+                                <span className='region'>{product.region}</span>
+                            </p>
                             <h2 className='title-product'>{product.title}</h2>
                         </Media.Body>
                     </Link>
