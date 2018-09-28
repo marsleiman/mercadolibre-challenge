@@ -26,7 +26,8 @@ class App extends Component {
               <Col xs={10} xsOffset={1} >
                 <Switch>
                   <Route path='/items/:id' component={Product} />
-                  <Route path='/items' render={(props) => <ProductList {...props}/>} />
+                  {/* <Route path='/items' render={(props) => <ProductList {...props}/>} /> */}
+                  <Route path='/items' component={ProductList} />
                 </Switch>
               </Col>
             </Row>
