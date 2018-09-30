@@ -72,74 +72,69 @@ body{
                 font-weight: 700;
             }
         }
-        .media-list{
-            .product-list{
-                background: $white;
-                border-radius: 3px;
-                margin-left: 0;
-                padding: 16px 0;
-                &:after{
-                    content: "";
-                    width: 93%;
-                    left: 3%;
-                    height: 2px;
-                    background-color: $grey3;
-                    position: absolute;
-                    margin: 16px 0;
+        .product-list{
+            background: $white;
+            border-radius: 3px;
+            margin-left: 0;
+            padding: 16px 0;
+            &:after{
+                content: "";
+                width: 93%;
+                left: 3%;
+                height: 2px;
+                background-color: $grey3;
+                position: absolute;
+                margin: 16px 0;
+            }
+            div.row{
+                a{
+                    color: $grey;
+                    &:hover{
+                        text-decoration: none;
+                    }
                 }
-                li.media{
-                    a{
-                        color: $grey;
-                        &:hover{
-                            text-decoration: none;
+                img.picture{
+                    border-radius: 4px;
+                    margin-left: 16px;
+                }
+                .mediabody{
+                    padding: 15px 0 0 8px;
+                    h2.title-product{
+                        font-size: 18px;
+                        margin: 32px 0 0 0;
+                        font-weight: 500;
+                        max-width: 70%;
+                    }
+                    span{
+                        font-size: 24px;
+                    &.decimals{
+                        display: inline-block;
+                        font-size: 14px;
+                        vertical-align: super;
                         }
                     }
-                    .media-left{
-                        img{
-                            border-radius: 4px;
-                            margin-left: 16px;
+                    p.free{
+                        &:after{
+                            content: "";
+                            background-image: url('./static/ic_shipping.png');
+                            width: 23px;
+                            height: 23px;
+                            position: absolute;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                            margin: 5px 0 0 5px;
                         }
                     }
-                    .media-body{
-                        padding: 15px 0 0 8px;
-                        h2.title-product{
-                            font-size: 18px;
-                            margin: 32px 0 0 0;
-                            font-weight: 500;
-                        }
-                        span{
-                            font-size: 24px;
-                        &.decimals{
-                            display: inline-block;
-                            font-size: 14px;
-                            vertical-align: super;
-                            }
-                        }
-                        p.free{
-                            &:after{
-                                content: "";
-                                background-image: url('./static/ic_shipping.png');
-                                width: 23px;
-                                height: 23px;
-                                position: relative;
-                                display: inline-block;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: contain;
-                                margin-left: 10px;
-                                top: 2px;
-                                right: 82px;
-                            }
-                        }
-                        span.region{
-                            position: relative;
-                            display: inline-block;
-                            left: 70%;
-                            font-size: 12px;
-                        }
-                        p{
-                            font-size: 18px;
-                        }
+                    span.region{
+                        position: relative;
+                        display: inline-block;
+                        left: 70%;
+                        font-size: 12px;
+                    }
+                    p{
+                        font-size: 18px;
                     }
                 }
             }
