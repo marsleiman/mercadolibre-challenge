@@ -17,7 +17,7 @@ export default function ProductCard ({product}) {
                             <CurrencyFormat value={product.price.amount} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} prefix={'$ '} />
                             <span className='decimals'>{product.price.decimals || ""}</span>
                         </p>
-                        <h2 className='title-product'>{product.title}</h2>
+                        <h2 className='title-product mb'>{product.title}</h2>
                     </Col>
                     <Col xs={12} md={2}>
                         <span className='region'>{product.region}</span>

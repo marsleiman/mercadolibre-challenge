@@ -103,7 +103,6 @@ body{
                         font-size: 18px;
                         margin: 32px 0 0 0;
                         font-weight: 500;
-                        max-width: 70%;
                     }
                     span{
                         font-size: 24px;
@@ -190,4 +189,33 @@ body{
 
 .row{
     margin: 0;
+}
+
+@media (max-width: 767px) {
+    body{
+        .row {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .product-list{
+            .mediabody{
+                h2.mb{
+                    margin: 10px 0;
+                }
+            }
+            .region{
+                margin: 10px auto;
+                display: block;
+            }
+        }
+        .product-view{
+            h1.product-title{
+                width: 100%;
+            }
+            .btn.btn-primary{
+                width: 100%;
+            }
+        }
+    }
 }

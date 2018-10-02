@@ -44,10 +44,10 @@ export class SearchBox extends Component {
   render() {
     return (
         <Row>
-            <Col xs={12} md={1} xsOffset={1}>
+            <Col xs={2} md={1} mdOffset={1}>
                 <img src={logo} alt='MercadoLibre' className='logo' onClick={event => this.goHome(event)} />
             </Col>
-            <Col xs={12} md={10}>
+            <Col xs={10} md={10}>
                 <form action='/items/' method='get'>
                     <input
                         type='text'
