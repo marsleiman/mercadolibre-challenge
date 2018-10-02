@@ -126,15 +126,15 @@ body{
                             margin: 5px 0 0 5px;
                         }
                     }
-                    span.region{
-                        position: relative;
-                        display: inline-block;
-                        left: 70%;
-                        font-size: 12px;
-                    }
                     p{
                         font-size: 18px;
                     }
+                }
+                span.region{
+                    display: block;
+                    position: relative;
+                    padding-top: 25px;
+                    font-size: 12px;
                 }
             }
         }
@@ -200,13 +200,9 @@ body{
         }
         .product-list{
             .mediabody{
-                h2.mb{
+                h2.title-product{
                     margin: 10px 0;
                 }
-            }
-            .region{
-                margin: 10px auto;
-                display: block;
             }
         }
         .product-view{
