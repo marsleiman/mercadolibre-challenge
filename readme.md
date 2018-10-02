@@ -8,6 +8,7 @@ https://dropbox.com/sh/nbq7zvtqd2gb9ab/AABIy7kFj4BvLeNfbLib_Jcya?dl=0
 
  - Node 8
  - Sass
+ - Chrome extension / Redux DevTools
 
 ## Instalacion
 
@@ -19,7 +20,7 @@ https://dropbox.com/sh/nbq7zvtqd2gb9ab/AABIy7kFj4BvLeNfbLib_Jcya?dl=0
 
 ## Instrucciones
 
-### Back
+### Desde /back
 
     npm start
 
@@ -28,7 +29,7 @@ http://localhost:3001/api/items/:item
 http://localhost:3001/api/items/?q=:q
 
 
-### Front
+### Desde /front
 
     npm start
 
